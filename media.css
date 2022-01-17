@@ -1,0 +1,6 @@
+@media screen and (max-width: 552px){
+    .main-container .sidebar{
+        flex-basis: 50px;
+        transition: flex-basis 300ms linear;
+    }
+}
