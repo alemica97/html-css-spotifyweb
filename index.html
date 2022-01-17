@@ -13,7 +13,7 @@
     <link rel="icon" href="img/spotify-brands.svg" type="image/icon type">
     <title>Spotify</title>
 </head>
-<body class="debug">
+<body >
 
     <main class="main-container">
         <!-- Divido il container principale in due parti, la barra laterale e  il contenitore che conterrà il contenuto principale  -->
@@ -52,11 +52,34 @@
 
         <div class="player-action">
 
-            <div class="song-action">
-                <!-- <ul></ul> -->
-            </div>
-            <div class="time-action">
+            <ul class="song-action">
+                <li>
+                    <a href=""><i class="fas fa-random"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fas fa-step-backward"></i></a>
+                </li>
+                
+                <li>
+                    <a href=""><i class="far fa-play-circle"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fas fa-step-forward"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fas fa-redo"></i></a>
+                </li>
+            </ul>
 
+            <div class="time-action">
+                <span>0:25</span>
+                <div class="song-duration">
+                    <div class="elapsed-time"></div>
+                    <div class="elapsed-time-hover">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <span>4:35</span>
             </div>
 
         </div>

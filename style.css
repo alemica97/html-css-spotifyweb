@@ -71,6 +71,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 42px;
 }
 
 /* parte sinistra del footer  */
@@ -95,9 +96,14 @@ body{
     color: #878787;
 }
 
+.player-song .album{
+    white-space: nowrap;
+}
+
 .player-song .saved{
     color: #878787;
     line-height: 42px;
+    white-space: nowrap;
 }
 
 .player-song .saved a{
@@ -112,6 +118,82 @@ body{
     margin: 0 auto;
 }
 
+.player-action .song-action{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    column-gap: 20px;
+}
+
+.player-action .song-action li:nth-child(3){
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.player-action .time-action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+    padding: 5px 10px;
+    max-width: 540px;
+}
+
+.player-action .time-action span{
+    width: 40px;
+    text-align: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;  
+}
+
+.time-action .song-duration{
+    flex-grow: 1;
+    height: 4px;
+    max-width: 425px;
+    border-radius: 5px;
+    background-color: #5A5A5A;
+    position: relative;
+}
+
+.time-action .elapsed-time{
+    width: 20%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #C1C1C1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.time-action .elapsed-time-hover{
+    width: 20%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #1DB954;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.time-action .circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50% , -30%);
+}
+
+.song-duration:hover .elapsed-time-hover{
+    visibility: visible;
+}
      /* DEBUG    */
 
 .debug .player-song, .debug .player-volume{
@@ -120,7 +202,6 @@ body{
 
 .debug .player-action{
     border: 1px solid yellow;
-    padding: 20px;
 }
 
 .debug .player-song .album{
@@ -135,14 +216,11 @@ body{
 
 .debug .player-action .song-action{
     border: 1px solid red;
-    padding: 10px;
-    width: 20%;
+    /* padding: 10px; */
 }
 
 .debug .player-action .time-action{
     border: 1px solid red;
-    padding: 10px;
-    width: 50%;
 }
 
 .debug .player-volume .tail{
