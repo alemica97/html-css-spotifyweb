@@ -17,3 +17,27 @@ a{
 img{
     width: 100%;
 }
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-container{
+    background-color: #141922;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.player-container{
+    height: 90px;
+    background-color: #282828;
+    /* z-index: 5; */
+}
+
+.main-container .sidebar{
+    width: 220px;
+    background-color: black;
+}
