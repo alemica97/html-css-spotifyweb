@@ -18,12 +18,14 @@ img{
     width: 100%;
 }
 
+/* Gestione del layout principale della pagina   */
 body{
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
+   /* MAIN   */
 .main-container{
     background-color: #141922;
     flex-grow: 1;
@@ -38,6 +40,34 @@ body{
 }
 
 .main-container .sidebar{
-    width: 220px;
+    flex-basis: 220px;
     background-color: black;
+}
+
+   /* FOOTER   */
+.player-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-container .player-song, .player-container .player-volume{
+    flex-basis: 220px;
+}
+
+.player-container .player-action{
+    flex-grow: 1;
+}
+
+     /* DEBUG    */
+
+.debug .player-song, .debug .player-volume{
+    border: 1px solid blue;
+    padding: 20px;
+}
+
+.debug .player-action{
+    border: 1px solid yellow;
+    padding: 20px;
 }
