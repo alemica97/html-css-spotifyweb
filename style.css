@@ -44,7 +44,7 @@ body{
 }
 
 .main-container .sidebar{
-    flex-basis: 220px;
+    flex-basis: 225px;
     padding: 20px;
     background-color: black;
 }
@@ -66,32 +66,56 @@ body{
 }
 
 .player-container .player-song, .player-container .player-volume{
-    flex-basis: 220px;
+    flex-basis: 225px;
+    padding: 0 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+/* parte sinistra del footer  */
+.player-song .album .album-cover{
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.player-song .album .album-info{
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.player-song .album .album-info span{
+    font-size: 11px;
+    font-weight: 700;
+    color: #878787;
+}
+
+.player-song .saved{
+    color: #878787;
+    line-height: 42px;
+}
+
+.player-song .saved a{
+    margin-left: 10px;
+}
+/* parte centrale del footer  */
 .player-container .player-action{
     flex-grow: 1;
 }
-
-/* .player-container .player-song{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
 
 .player-action .song-action, .player-action .time-action{
     margin: 0 auto;
 }
 
-
      /* DEBUG    */
 
 .debug .player-song, .debug .player-volume{
     border: 1px solid blue;
-    padding: 20px;
 }
 
 .debug .player-action{
@@ -101,12 +125,12 @@ body{
 
 .debug .player-song .album{
     border: 1px solid red;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .debug .player-song .saved{
     border: 1px solid red;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .debug .player-action .song-action{
