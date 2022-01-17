@@ -14,6 +14,10 @@ a{
     color: currentColor;
 }
 
+ul, li{
+    list-style-type: none;
+}
+
 img{
     width: 100%;
 }
@@ -41,7 +45,16 @@ body{
 
 .main-container .sidebar{
     flex-basis: 220px;
+    padding: 20px;
     background-color: black;
+}
+
+.sidebar .logo{
+    width: 130px;
+}
+
+.sidebar .logo .logo-small{
+    display: none;
 }
 
    /* FOOTER   */
@@ -54,21 +67,25 @@ body{
 
 .player-container .player-song, .player-container .player-volume{
     flex-basis: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .player-container .player-action{
     flex-grow: 1;
 }
 
-.player-container .player-song{
+/* .player-container .player-song{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 
 .player-action .song-action, .player-action .time-action{
     margin: 0 auto;
 }
+
 
      /* DEBUG    */
 
@@ -102,4 +119,24 @@ body{
     border: 1px solid red;
     padding: 10px;
     width: 50%;
+}
+
+.debug .player-volume .tail{
+    border: 1px solid red;
+    padding: 15px;
+}
+
+.debug .player-volume .cast{
+    border: 1px solid red;
+    padding: 15px;
+}
+
+.debug .player-volume .volume{
+    border: 1px solid red;
+    padding: 15px;
+}
+
+.debug .player-volume .volume-level{
+    border: 1px solid red;
+    padding: 15px;
 }

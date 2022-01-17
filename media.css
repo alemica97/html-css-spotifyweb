@@ -2,5 +2,18 @@
     .main-container .sidebar{
         flex-basis: 50px;
         transition: flex-basis 300ms linear;
+        padding: 5px 10px;
+    }
+
+    .sidebar .logo .logo-large{
+        display: none;
+    }
+
+    .sidebar .logo{
+        width: 100%;
+    }
+
+    .sidebar .logo .logo-small{
+        display: inline-block;
     }
 }
