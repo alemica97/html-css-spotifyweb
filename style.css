@@ -60,6 +60,13 @@ body{
     flex-grow: 1;
 }
 
+.player-container .player-song{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
      /* DEBUG    */
 
 .debug .player-song, .debug .player-volume{
@@ -70,4 +77,14 @@ body{
 .debug .player-action{
     border: 1px solid yellow;
     padding: 20px;
+}
+
+.debug .player-song .album{
+    border: 1px solid red;
+    padding: 15px;
+}
+
+.debug .player-song .saved{
+    border: 1px solid red;
+    padding: 15px;
 }
