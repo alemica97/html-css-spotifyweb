@@ -66,6 +66,9 @@ body{
     justify-content: space-between;
 }
 
+.player-action .song-action, .player-action .time-action{
+    margin: 0 auto;
+}
 
      /* DEBUG    */
 
@@ -87,4 +90,16 @@ body{
 .debug .player-song .saved{
     border: 1px solid red;
     padding: 15px;
+}
+
+.debug .player-action .song-action{
+    border: 1px solid red;
+    padding: 10px;
+    width: 20%;
+}
+
+.debug .player-action .time-action{
+    border: 1px solid red;
+    padding: 10px;
+    width: 50%;
 }
