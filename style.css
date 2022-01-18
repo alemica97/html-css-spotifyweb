@@ -31,7 +31,6 @@ body{
 
    /* MAIN   */
 .main-container{
-    background-color: #141922;
     flex-grow: 1;
     display: flex;
     flex-direction: row;
@@ -41,6 +40,13 @@ body{
     height: 90px;
     background-color: #282828;
     /* z-index: 5; */
+}
+
+.main-contents{
+    background-color: #141922;
+    flex-grow: 1;
+    overflow-y: scroll;
+    position: relative;
 }
 
 /* MAIN sidebar   */
@@ -65,7 +71,7 @@ body{
 
 /* sidebar nav  */
 .sidebar .sidebar-nav{
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 .sidebar .nav-element{
@@ -97,7 +103,7 @@ body{
 .sidebar .sidebar-playlist{
     flex-grow: 1;
     overflow: auto;
-    padding: 5px 20px;
+    padding: 0px 20px;
 }
 
 .sidebar .sidebar-playlist > h3{
@@ -112,7 +118,7 @@ body{
 }
 
 .sidebar-playlist .new-playlist > a{
-    font-size: 45px;
+    font-size: 40px;
     vertical-align: middle;
 }
 
@@ -128,6 +134,61 @@ body{
     font-weight: 700;
     margin-bottom: 15px;
 }
+
+/* sidebar footer   */
+.sidebar-footer{
+    padding: 7px 20px;
+}
+
+.sidebar-footer .install{
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sidebar-footer .install a > span{
+    margin-left: 5px;
+}
+
+.sidebar-footer .install::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #878787;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-footer .artist .artist-profile{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #808080;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sidebar-footer .artist > span{
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* main contents   */
+.main-contents .banner{
+    width: calc(100% - 225px);
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* z-index: 9999; */
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
 
 
    /* FOOTER   */
@@ -308,8 +369,12 @@ body{
 .volume-level:hover .actual-volume-hover{
     visibility: visible;
 }
+
+
+
+
      /* DEBUG    */
-.debug .logo{
+/* .debug .logo{
     border: 1px solid yellow;
 }
 
@@ -321,9 +386,8 @@ body{
     border: 1px solid greenyellow;
 }
 
-.debug .sidebar-artist{
+.debug .sidebar-footer{
     border: 1px solid salmon;
-    padding: 10px;
 }
 
 .debug .player-song, .debug .player-volume{
@@ -336,17 +400,14 @@ body{
 
 .debug .player-song .album{
     border: 1px solid red;
-    /* padding: 15px; */
 }
 
 .debug .player-song .saved{
     border: 1px solid red;
-    /* padding: 15px; */
 }
 
 .debug .player-action .song-action{
     border: 1px solid red;
-    /* padding: 10px; */
 }
 
 .debug .player-action .time-action{
@@ -371,4 +432,4 @@ body{
 .debug .player-volume .volume-wrapper{
     border: 1px solid red;
 
-}
+} */
