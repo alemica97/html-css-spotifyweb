@@ -43,18 +43,28 @@ body{
     /* z-index: 5; */
 }
 
+/* MAIN sidebar   */
 .main-container .sidebar{
     flex-basis: 225px;
-    padding: 20px;
+    flex-shrink: 0;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .sidebar .logo{
     width: 130px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .sidebar .logo .logo-small{
     display: none;
+}
+
+.sidebar .sidebar-playlist{
+    flex-grow: 1;
 }
 
    /* FOOTER   */
@@ -71,6 +81,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 42px;
 }
 
@@ -109,6 +120,7 @@ body{
 .player-song .saved a{
     margin-left: 10px;
 }
+
 /* parte centrale del footer  */
 .player-container .player-action{
     flex-grow: 1;
@@ -180,7 +192,7 @@ body{
     visibility: hidden;
 }
 
-.time-action .circle{
+.circle{
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -194,7 +206,64 @@ body{
 .song-duration:hover .elapsed-time-hover{
     visibility: visible;
 }
+
+/* parte destra del footer  */
+.player-volume li{
+    text-align: center;
+    color: #878787;
+}
+
+.player-volume .volume-level{
+    height: 4px;
+    width: 118px;
+    border-radius: 5px;
+    background-color: #5A5A5A;
+    position: relative;
+}
+
+.player-volume .actual-volume{
+    width: 20%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #C1C1C1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.player-volume .actual-volume-hover{
+    width: 20%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #1DB954;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.volume-level:hover .actual-volume-hover{
+    visibility: visible;
+}
      /* DEBUG    */
+.debug .logo{
+    border: 1px solid yellow;
+}
+
+.debug nav{
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+.debug .sidebar-playlist{
+    border: 1px solid greenyellow;
+    padding: 10px;
+}
+
+.debug .sidebar-artist{
+    border: 1px solid salmon;
+    padding: 10px;
+}
 
 .debug .player-song, .debug .player-volume{
     border: 1px solid blue;
@@ -225,20 +294,20 @@ body{
 
 .debug .player-volume .tail{
     border: 1px solid red;
-    padding: 15px;
+
 }
 
 .debug .player-volume .cast{
     border: 1px solid red;
-    padding: 15px;
+
 }
 
 .debug .player-volume .volume{
     border: 1px solid red;
-    padding: 15px;
+
 }
 
-.debug .player-volume .volume-level{
+.debug .player-volume .volume-wrapper{
     border: 1px solid red;
-    padding: 15px;
+
 }

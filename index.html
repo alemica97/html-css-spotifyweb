@@ -13,7 +13,7 @@
     <link rel="icon" href="img/spotify-brands.svg" type="image/icon type">
     <title>Spotify</title>
 </head>
-<body >
+<body class="debug">
 
     <main class="main-container">
         <!-- Divido il container principale in due parti, la barra laterale e  il contenitore che conterrà il contenuto principale  -->
@@ -21,6 +21,27 @@
             <div class="logo">
                 <img class="logo-large" src="img/logo.svg">
                 <img class="logo-small" src="img/logo-small.svg">
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                   <li class="nav-logo">
+                        <!-- <div>
+                            <img src="img/home.svg">
+                        </div> -->
+                   </li>
+                   <li class="nav-logo">
+
+                   </li>
+                   <li class="nav-logo">
+
+                   </li>
+                </ul>
+            </nav>
+            <div class="sidebar-playlist">
+
+            </div>
+            <div class="sidebar-artist">
+
             </div>
         </aside>
 
@@ -87,16 +108,21 @@
         <!-- Quattro elementi allineati verticalmente -->
         <ul class="player-volume">
             <li class="tail">
-
+                <a href=""><i class="fas fa-list"></i></a>
             </li>
             <li class="cast">
-
+                <a href=""><i class="fas fa-desktop"></i></a>
             </li>
             <li class="volume">
-
+                <a href=""><i class="fas fa-volume-up"></i></a>
             </li>
-            <li class="volume-level">
-
+            <li class="volume-wrapper">
+                <div class="volume-level">
+                    <div class="actual-volume"></div>
+                    <div class="actual-volume-hover">
+                        <div class="circle"></div>
+                    </div>
+                </div>
             </li>
         </ul>
 
