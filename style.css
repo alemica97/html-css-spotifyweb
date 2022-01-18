@@ -212,7 +212,38 @@ body{
     white-space: nowrap;
 }
 
+/* MAIN contents   */
+.main-contents .contents-wrapper{
+    width: 100%;
+    padding: 110px 20px 20px 20px;
+}
 
+.contents-wrapper .app-sections ul{
+    display: contents;
+}
+
+.contents-wrapper .app-sections{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+.app-sections .section > span{
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #818387;
+}
+
+.app-sections .section.active > span::after{
+        content: "";
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #ADFF2F;
+        margin: 5px auto;
+}
    /* FOOTER   */
 .player-container{
     display: flex;
@@ -455,3 +486,24 @@ body{
     border: 1px solid red;
 
 } */
+
+
+.debug .app-sections{
+    border: 1px solid yellow;
+    padding: 20px;
+}
+
+.debug .recent-contents{
+    border: 1px solid red;
+    padding: 20px;
+}
+
+.debug .specific-contents{
+    border: 1px solid blueviolet;
+    padding: 20px;
+}
+
+.debug .popular-contents{
+    border: 1px solid cyan;
+    padding: 20px;
+}
