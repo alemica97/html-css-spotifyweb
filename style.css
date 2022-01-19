@@ -197,7 +197,7 @@ body{
     width: calc(100% - 225px);
     height: 90px;
     background-color: rgba(0, 0, 0, 0.5);
-    /* z-index: 9999; */
+    z-index: 10;
     position: fixed;
     top: 0;
     right: 0;
@@ -265,6 +265,7 @@ body{
 .main-contents h1{
     font-size: 24px;
     font-weight: 800;
+    margin-bottom: 7px;
 }
 
 /* Main contents album-card   */
@@ -272,13 +273,13 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    flex-wrap: wrap;
     padding: 25px 0;
     column-gap: 15px;
 }
 
 .album-wrapper .album-card{
-    flex-basis: 16%;
+    flex-basis: 15%;
 }
 
 .album-card .card-header{
@@ -314,16 +315,20 @@ body{
 
 .album-card .card-info > h3{
     margin: 15px 0 10px 0;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 800;
 }
 
-.album-card .card-info > span{
-    font-size: 12px;
+.album-card .card-info > span, .subtitle{
+    font-size: 13px;
     font-weight: 800;
     color: #7A7C80;
 }
 
-
+.card-header.round{
+    border-radius: 50%;
+    overflow: hidden;
+}
    /* FOOTER   */
 .player-container .player-song, .player-container .player-volume{
     flex-basis: 225px;
