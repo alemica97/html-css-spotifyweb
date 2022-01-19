@@ -1,19 +1,92 @@
-/* @media screen and (max-width: 552px){
+@media screen and (max-width: 878px){
+    .album-wrapper .album-card{
+        flex-basis: 21%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .album-wrapper .album-card{
+        flex-basis: 46%;
+    }
+}
+
+@media screen and (max-width: 552px){
     .main-container .sidebar{
         flex-basis: 50px;
-        transition: flex-basis 300ms linear;
-        padding: 5px 10px;
+        padding: 8px 10px;
     }
 
     .sidebar .logo .logo-large{
         display: none;
     }
 
-    .sidebar .logo{
-        width: 50px;
+    .sidebar .logo .logo-small{
+        display: block;
     }
 
-    .sidebar .logo .logo-small{
-        display: inline-block;
+    .sidebar .logo{
+        width: 28px;
+        margin: 0 auto;
     }
-} */
+
+    .sidebar .sidebar-nav{
+        padding: 10px 0;
+    }
+
+    .sidebar nav{
+        flex-grow: 1;
+    }
+
+    .sidebar .nav-element{
+        padding-left: 0;
+        border-left: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sidebar .nav-element span{
+        display: none;
+    }
+    
+    .playlist-wrapper{
+        overflow: hidden;
+        padding: 0;
+        display: none;
+    }
+
+    .sidebar .sidebar-playlist > h3{
+        display: none;
+    }
+
+    .sidebar-playlist .new-playlist{
+        display: none;
+    }
+
+    .sidebar-footer{
+        padding: 0;
+    }
+
+    .sidebar-footer .install a > span,
+    .sidebar-footer .artist > span,
+    .sidebar-footer .install::after{
+        display: none;
+    }
+
+    .sidebar-footer .artist .artist-profile{
+        margin: 10px auto;
+        display: block;
+    }
+    
+    .sidebar .install{
+        padding: 10px;
+    }
+    .main-contents .banner{
+        width: calc(100% - 50px);
+        height: 90px;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+}
