@@ -34,12 +34,7 @@ body{
     flex-grow: 1;
     display: flex;
     flex-direction: row;
-}
-
-.player-container{
-    height: 90px;
-    background-color: #282828;
-    /* z-index: 5; */
+    height: calc(100vh - 90px);
 }
 
 .main-contents{
@@ -47,7 +42,21 @@ body{
     flex-grow: 1;
     overflow-y: scroll;
     position: relative;
+    color: white;
 }
+
+.player-container{
+    height: 90px;
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99999;
+    /* overflow-x: auto; */
+}
+
 
 /* MAIN sidebar   */
 .main-container .sidebar{
@@ -57,6 +66,7 @@ body{
     background-color: black;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .sidebar .logo{
@@ -101,8 +111,12 @@ body{
 
 /* sidebar playlist  */
 .sidebar .sidebar-playlist{
+    display: contents;
+}
+
+.playlist-wrapper{
     flex-grow: 1;
-    overflow: auto;
+    overflow-y: auto;
     padding: 0px 20px;
 }
 
@@ -111,10 +125,12 @@ body{
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 800;
+    padding: 0 20px;
 }
 
 .sidebar-playlist .new-playlist{
     margin: 10px 0;
+    padding: 0 20px;
 }
 
 .sidebar-playlist .new-playlist > a{
@@ -155,8 +171,7 @@ body{
     width: 100%;
     height: 1px;
     background-color: #878787;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px auto;
 }
 
 .sidebar-footer .artist .artist-profile{
@@ -226,7 +241,9 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     column-gap: 25px;
+    white-space: nowrap;
 }
 
 .app-sections .section > span{
@@ -244,14 +261,70 @@ body{
         background-color: #ADFF2F;
         margin: 5px auto;
 }
-   /* FOOTER   */
-.player-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+.main-contents h1{
+    font-size: 24px;
+    font-weight: 800;
 }
 
+/* Main contents album-card   */
+.album-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px 0;
+    column-gap: 15px;
+}
+
+.album-wrapper .album-card{
+    flex-basis: 16%;
+}
+
+.album-card .card-header{
+    width: 100%;
+    position: relative;
+}
+
+.card-header .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.overlay > a{
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.card-header:hover .overlay{
+    visibility: visible;
+}
+
+.album-card .card-info{
+    text-align: center;
+}
+
+.album-card .card-info > h3{
+    margin: 15px 0 10px 0;
+    font-size: 14px;
+}
+
+.album-card .card-info > span{
+    font-size: 12px;
+    font-weight: 800;
+    color: #7A7C80;
+}
+
+
+   /* FOOTER   */
 .player-container .player-song, .player-container .player-volume{
     flex-basis: 225px;
     padding: 0 10px;
@@ -362,7 +435,7 @@ body{
     width: 20%;
     height: 4px;
     border-radius: 5px;
-    background-color: #1DB954;
+    background-color: #ADFF2E;
     position: absolute;
     top: 0;
     left: 0;
@@ -385,6 +458,10 @@ body{
 }
 
 /* parte destra del footer  */
+.player-volume{
+    flex-shrink: 0;
+}
+
 .player-volume li{
     text-align: center;
     color: #878787;
@@ -412,7 +489,7 @@ body{
     width: 20%;
     height: 4px;
     border-radius: 5px;
-    background-color: #1DB954;
+    background-color: #ADFF2E;
     position: absolute;
     top: 0;
     left: 0;
