@@ -3,6 +3,7 @@
 @media screen and (min-width: 1900px){
     .album-wrapper{
         gap: 3%;
+        transition: 300ms;
     }
 
     .album-wrapper .album-card{
