@@ -1,10 +1,10 @@
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 1900px){
     .album-wrapper{
         gap: 1%;
     }
 
     .album-wrapper .album-card{
-        flex-basis: calc(93% / 8);
+        flex-basis: calc(93% / 7);
     }
 
     .overlay > a{
@@ -44,6 +44,7 @@
     .main-container .sidebar{
         flex-basis: 50px;
         padding: 8px 10px;
+        z-index: 11;
     }
 
     .sidebar .logo .logo-large{
