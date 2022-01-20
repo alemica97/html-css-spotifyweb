@@ -212,7 +212,7 @@ body{
 .main-contents .banner{
     width: calc(100% - 225px);
     height: 90px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0));
     z-index: 10;
     position: fixed;
     top: 0;
@@ -285,11 +285,21 @@ body{
 .app-sections .section.active > a::after{
     content: "";
     display: block;
-    width: 35px;
+    width: 40px;
     height: 3px;
     border-radius: 9999px;
     background-color: #ADFF2F;
     margin: 5px auto;
+    animation: 1s linear 0.5s 1 under-active;
+}
+
+@keyframes under-active{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 40px;
+    }
 }
 
 .main-contents h1{
@@ -411,6 +421,10 @@ body{
     white-space: nowrap;
 }
 
+.player-song .saved{
+    padding-left: 10px;
+}
+
 .player-song .saved,
 .player-song .album .album-info span{
     color: #878787;
@@ -448,7 +462,12 @@ body{
 }
 
 .player-action .song-action li:hover{
-    transform: scale(1.08 , 1.08);
+    transform: scale(1.1 , 1.1);
+}
+
+.player-action .song-action li:active{
+    color: #ADFF2E;
+    transition: 200ms;
 }
 
 .player-action .time-action{
