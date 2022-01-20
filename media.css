@@ -1,12 +1,21 @@
+
 @media screen and (max-width: 878px){
     .album-wrapper .album-card{
         flex-basis: 21%;
+    }
+
+    .overlay > a{
+        font-size: calc(1vw + 25px);
     }
 }
 
 @media screen and (max-width: 640px){
     .album-wrapper .album-card{
         flex-basis: 46%;
+    }
+
+    .overlay > a{
+        font-size: calc(2vw + 20px);
     }
 }
 
