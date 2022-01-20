@@ -498,11 +498,17 @@ body{
 
 .song-duration:hover .circle{
     display: block;
+}
+
+.song-duration:active .circle{
     animation: 3s linear 0.2s 1 play-circle;
 }
 
 .song-duration:hover .elapsed-time{
     background-color: #ADFF2E;
+}
+
+.song-duration:active .elapsed-time{
     animation: 3s linear 0.2s 1 play;
 }
 
@@ -526,6 +532,10 @@ body{
 /* parte destra del footer  */
 .player-volume li{
     color: #878787;
+}
+
+.player-volume li a:hover{
+    color: white;
 }
 
 .player-volume{
