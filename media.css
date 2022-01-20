@@ -1,10 +1,12 @@
+
+/* Ho aggiunto delle media query anche per display più grandi, perchè avendo un 34" ho notato che gli album diventavano troppo grandi  */
 @media screen and (min-width: 1900px){
     .album-wrapper{
-        gap: 1%;
+        gap: 3%;
     }
 
     .album-wrapper .album-card{
-        flex-basis: calc(93% / 7);
+        flex-basis: calc(82% / 7);
     }
 
     .overlay > a{
@@ -12,21 +14,46 @@
     }
 }
 
-@media screen and (max-width: 878px){
+@media screen and (min-width: 2500px){
     .album-wrapper{
         gap: 2%;
     }
 
     .album-wrapper .album-card{
-        flex-basis: calc(94% / 4);
+        flex-basis: calc(84% / 9);
+    }
+
+    .overlay > a{
+        font-size: calc(1vw + 35px);
+    }
+}
+
+@media screen and (max-width: 878px){
+    *{
+        transition: all 300ms;
+    }
+
+    .album-wrapper{
+        gap: 4%;
+    }
+
+    .album-wrapper .album-card{
+        flex-basis: calc(88% / 4);
+        min-width: 150px;
     }
 
     .overlay > a{
         font-size: calc(1vw + 25px);
     }
-}
 
-@media screen and (max-width: 640px){
+    .album-wrapper{
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Per far andare gli elementi a destra con una scroll bar invece che farli incolonnare */
+    }
+}
+/* La media query sotto i 640px la commento perchè ho adottato il metodo richiesto come bonus  */
+
+/* @media screen and (max-width: 640px){
     .album-wrapper{
         gap: 5%;
     }
@@ -37,8 +64,8 @@
 
     .overlay > a{
         font-size: calc(2vw + 20px);
-    }
-}
+    }  
+} */
 
 @media screen and (max-width: 552px){
     .main-container .sidebar{
