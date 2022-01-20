@@ -278,12 +278,12 @@ body{
     justify-content: flex-start;
     flex-wrap: wrap;
     padding: 25px 0;
-    gap: 15px;
+    gap: 1%;
     width: 100%;
 }
 
 .album-wrapper .album-card{
-    flex-basis: 15%;
+    flex-basis: calc(95% / 6);  /*100% - 5% del gap diviso le 6 colonne*/
 }
 
 .album-card .card-header{

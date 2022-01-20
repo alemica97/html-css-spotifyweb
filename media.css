@@ -1,7 +1,24 @@
+@media screen and (min-width: 2000px){
+    .album-wrapper{
+        gap: 1%;
+    }
+
+    .album-wrapper .album-card{
+        flex-basis: calc(93% / 8);
+    }
+
+    .overlay > a{
+        font-size: calc(1vw + 30px);
+    }
+}
 
 @media screen and (max-width: 878px){
+    .album-wrapper{
+        gap: 2%;
+    }
+
     .album-wrapper .album-card{
-        flex-basis: 21%;
+        flex-basis: calc(94% / 4);
     }
 
     .overlay > a{
@@ -10,8 +27,12 @@
 }
 
 @media screen and (max-width: 640px){
+    .album-wrapper{
+        gap: 5%;
+    }
+    
     .album-wrapper .album-card{
-        flex-basis: 46%;
+        flex-basis: calc(95% / 2);
     }
 
     .overlay > a{
